@@ -107,18 +107,20 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    console.log('HI there');
+    
     countdownOverlay.innerHTML = `<h1>  ${count} </h1>`;
 
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
+      
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
-      startTime = new Date().getTime();
+      startTime = display;
+      console.log('HI there')
     }
     count--;
   }, 1000);
@@ -132,7 +134,7 @@ displayHistory();
 
 // Show typing time spent
 setInterval(() => {
-  const currentTime = new Date().getTime();
+  const currentTime = display;
   const timeSpent = (currentTime - startTime) / 1000;
 
 
