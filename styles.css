@@ -145,9 +145,14 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
-  margin-top: 40px;/* 
+  margin-top: 40px; /* 
   justify-content: space-around; */
-}
+} 
+/* #histories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
 
 .card {
   width: 100%;
@@ -189,12 +194,30 @@ button {
     padding: 0 20px;
     width: 100%;
   }
+  #histories{
+    grid-template-columns: repeat(1, 1fr);
+  }
   .card {
     flex-direction: column;
   }
-  .histories{
+  /* .histories{
     
     grid-template-columns: repeat(1fr,1) ;
+  } */
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 1600px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
   }
+  .card {
+    flex-direction: column;
+  }
+  #histories{
+    
+    grid-template-columns: repeat(3,1fr) ;
+  } 
 }
 
