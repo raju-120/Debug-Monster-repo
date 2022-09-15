@@ -11,6 +11,20 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
+.nabars{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 50px;
+}
+.nabars a{
+  text-decoration: none;
+  color: violet;
+}
+#nav-title{
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .box-container {
   width: 70%;
   margin: 0 auto;

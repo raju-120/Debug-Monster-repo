@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+  <header>
+    <section>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success" href="index.html">Home</a>
+        </div>
+      </nav>
+    </section>  
+  </header>
+
+  <main>
+    <section class="bg-dark m-auto">
+      <section>
+        <h1 class="text-center text-primary mt-2">
+          Welcome to My <span class="text-success">Vlog</span>
+        </h1>
+        
+      </section>
+  
+      <section>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center text-info my-5">Difference between localstorage and sessionstorage</h5>
+            
+            <table class="table table-bordered border-primary">
+              <thead>
+                <tr>
+                  <th scope="col">Localstorage</th>
+                  <th scope="col">Sessionstorage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>This read-only interface property provides access to the Document's local storage object, the stored data is stored across browser sessions.</td>
+                  <td>Session Storage objects can be accessed using the sessionStorage read-only property.</td>
+                </tr>
+                <tr>
+                  <td>As it is not session-based, it must be deleted via javascript or manually</td>
+                  <td>It's session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed</td>
+                </tr>
+                <tr>
+                  <td>There is no transfer of data to the server</td>
+                  <td>There is no transfer of data to the server</td>
+                </tr>
+                <tr>
+                  <td>There are fewer old browsers that support it</td>
+                  <td>There are fewer old browsers that support it</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+  
+      <section class="mt-4">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">What is Global Scope?</h5>
+                <p class="card-text">The JS global scope is the context where everything in a Javascript program executes by default. This scope includes all variables, objects, and references that are not contained within a customized scope defined by a programmer.Global scope is the entire Javascript execution environment. Any variables assigned without an explicit scope automatically become global variables.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">What is Block Scope</h5>
+                <p class="card-text">This scope restricts the variable that is declared inside a specific block, from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped. In order to access the variables of that specific block, we need to create an object for it. Variables declared with the var keyword, do not have block scope.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="mt-4">
+        <div class="card text-center">
+          <div class="card-header">
+            How Does the JS Event Loop works?
+          </div>
+          <div class="card-body">
+            
+            <p class="card-text">JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.The following sections explain a theoretical model. Modern JavaScript engines implement and heavily optimize the described semantics.</p>
+            <p class="card-text">Stack: Function calls form a stack of frames.</p>
+            <p class="card-text">Order of operations: <br>
+  
+              1. When calling bar, a first frame is created containing references to bar's arguments and local variables. <br>
+             2. When bar calls foo, a second frame is created and pushed on top of the first one, containing references to foo's arguments and local variables. <br>
+             3.When foo returns, the top frame element is popped out of the stack (leaving only bar's call frame). <br>
+             4. When bar returns, the stack is empty.</p> <br>
+             <p class="card-text">Heap:
+              Objects are allocated in a heap which is just a name to denote a large (mostly unstructured) region of memory.</p>
+              <p class="card-text">Queue: 
+                A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function that gets called to handle the message. <br>
+                
+                At some point during the event loop, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.
+                 <br>
+                The processing of functions continues until the stack is once again empty. Then, the event loop will process the next message in the queue (if there is one).</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="mt-4">
+        <div class="card text-center">
+          <div class="card-header">
+            How many types of Undefined we will get?
+          </div>
+          <div class="card-body">
+            <h5 class="card-head">We will get 8 types of Undefined.Those are: </h5>
+            <p class="card-text">
+              1.varibale that is not initialized will give undefine. <br>
+              2.function with no return. <br> 
+              3.parameter that is not passed will be undefined. <br>
+              4.If return has nothing on the right side will return undefined. <br>
+              5.property that does not exist on an object will return as a undefined. <br>
+              6.Accessing array element outside of the index range. <br>
+              7. deleting an element inside an array. <br>
+              8.set a value directly to undefined. 
+            </p>
+          </div>
+        </div>
+      </section>
+  
+    </section>
+  </main>
+</body>
+</html>
