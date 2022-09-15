@@ -80,8 +80,8 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
+    <p>You made <span class="bold red">${errorCount++}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -140,4 +140,4 @@ setInterval(() => {
   const showTime = document.getElementById("show-time");
   showTime.innerHTML = `${startTime ? timeSpent : 0} seconds`;
    
-}, 1000);
+}, );
